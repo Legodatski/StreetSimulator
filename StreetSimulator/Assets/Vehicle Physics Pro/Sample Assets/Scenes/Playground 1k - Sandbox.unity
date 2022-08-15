@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 2020388220}
   - component: {fileID: 2020388225}
   - component: {fileID: 2020388224}
+  - component: {fileID: 2020388226}
   m_Layer: 0
   m_Name: AE86
   m_TagString: Untagged
@@ -927,7 +928,7 @@ MonoBehaviour:
     frictionMultiplier: 1
     maxAdherentSpeed: 6.388889
   engine:
-    idleRpm: 600
+    idleRpm: 1000
     peakRpm: 4200
     maxRpm: 4210
     idleRpmTorque: 135
@@ -949,7 +950,7 @@ MonoBehaviour:
     activeIdleRange: 0.5
     activeIdleBias: 0.25
     canStall: 1
-    stallBias: 0.5
+    stallBias: 0.241
     stalledFrictionTorque: 25
     starterMotorBias: 0.6
     maxFuelPerRev: 0.16
@@ -964,7 +965,7 @@ MonoBehaviour:
   gearbox:
     type: 0
     forwardGearRatios:
-    - 2.5
+    - 3.5
     - 2.35
     - 1.53
     - 1.1
@@ -1132,6 +1133,103 @@ MonoBehaviour:
   showTireForces: 1
   showSurfaceForces: 0
   useLogScale: 1
+--- !u!114 &2020388226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020388219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -843616963, guid: b8873f7cd5fec6f49a4b37228b9b23ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipTemplate: {fileID: 0}
+  engine:
+    audioSource: {fileID: 0}
+    audioBaseRpm: 3000
+    rpmScaling: 1
+    volumeAtRest: 0.4
+    volumeAtFullLoad: 1
+    volumeChangeRateUp: 64
+    volumeChangeRateDown: 32
+    keepVolumeAtIdleRpm: 0
+    idleRpm: 800
+  engineExtras:
+    turboAudioSource: {fileID: 0}
+    turboMinRpm: 3500
+    turboMaxRpm: 6500
+    turboMinPitch: 0.8
+    turboMaxPitch: 1.5
+    turboMaxVolume: 1
+    transmissionAudioSource: {fileID: 0}
+    transmissionMinRpm: 500
+    transmissionMaxRpm: 5500
+    transmissionMinPitch: 0.2
+    transmissionMaxPitch: 1.1
+    transmissionMinVolume: 0.1
+    transmissionMaxVolume: 0.2
+    retarderAudioSource: {fileID: 0}
+    retarderMaxTorque: 5000
+    retarderMinPitch: 0.5
+    retarderMaxPitch: 1.1
+    retarderMaxVolume: 0.8
+  wheels:
+    skidAudioSource: {fileID: 0}
+    skidMinSlip: 1
+    skidMaxSlip: 8
+    skidMinPitch: 0.9
+    skidMaxPitch: 0.8
+    skidMaxVolume: 0.9
+    skidIntensity: 0.65
+    offroadAudioSource: {fileID: 0}
+    offroadMinSpeed: 1
+    offroadMaxSpeed: 50
+    offroadMinPitch: 0.65
+    offroadMaxPitch: 2.7
+    offroadMinVolume: 0.34
+    offroadMaxVolume: 1
+    bumpAudioClip: {fileID: 8300000, guid: 4ab75ff7e95e18b49b017cc1c4fc2de6, type: 3}
+    bumpMinForceDelta: 2000
+    bumpMaxForceDelta: 18000
+    bumpMinVolume: 0.2
+    bumpMaxVolume: 0.7
+  impacts:
+    hardImpactAudioClip: {fileID: 8300000, guid: 77cc21ec7d1226f45ab26f781cd8206c, type: 3}
+    softImpactAudioClip: {fileID: 8300000, guid: 2442b3b7c0179504ab02df5d40856ad7, type: 3}
+    minSpeed: 0.1
+    maxSpeed: 10
+    minPitch: 0.4
+    maxPitch: 0.6
+    randomPitch: 0.2
+    minVolume: 0.7
+    maxVolume: 1
+    randomVolume: 0.2
+  drags:
+    hardDragAudioSource: {fileID: 0}
+    softDragAudioSource: {fileID: 0}
+    minSpeed: 2
+    maxSpeed: 20
+    minPitch: 0.6
+    maxPitch: 0.8
+    minVolume: 0.8
+    maxVolume: 1
+    scratchAudioClip: {fileID: 8300000, guid: b75c88da945e230429739740c8b1f102, type: 3}
+    scratchRandomThreshold: 0.02
+    scratchMinSpeed: 2
+    scratchMinInterval: 0.2
+    scratchMinPitch: 0.7
+    scratchMaxPitch: 1.1
+    scratchMinVolume: 0.9
+    scratchMaxVolume: 1
+  wind:
+    windAudioSource: {fileID: 0}
+    minSpeed: 3
+    maxSpeed: 40
+    minPitch: 0.5
+    maxPitch: 1
+    maxVolume: 0.5
 --- !u!1 &2090065534
 GameObject:
   m_ObjectHideFlags: 0
