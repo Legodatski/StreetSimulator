@@ -290,8 +290,8 @@ MonoBehaviour:
   center: {x: -0.108, y: 0, z: 0}
   suspensionDistance: 0.25
   suspensionAnchor: 0.5
-  springRate: 30000
-  damperRate: 1500
+  springRate: 40000
+  damperRate: 2000
   suspensionTransform: {fileID: 0}
   caliperTransform: {fileID: 0}
   wheelTransform: {fileID: 3886681565177206228}
@@ -421,8 +421,8 @@ MonoBehaviour:
   center: {x: -0.108, y: 0, z: 0}
   suspensionDistance: 0.25
   suspensionAnchor: 0.5
-  springRate: 30000
-  damperRate: 1500
+  springRate: 40000
+  damperRate: 2000
   suspensionTransform: {fileID: 0}
   caliperTransform: {fileID: 0}
   wheelTransform: {fileID: 7301521122315538864}
@@ -431,6 +431,36 @@ MonoBehaviour:
   hideWheelOnDisable: 1
   localSteeringAxis: 1
   localSpinAxis: 0
+--- !u!1 &872025521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 872025522}
+  m_Layer: 0
+  m_Name: CoM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &872025522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872025521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.24, z: 0.075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2020388223}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1044190312
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,15 +704,15 @@ MonoBehaviour:
   center: {x: 0.108, y: 0, z: 0}
   suspensionDistance: 0.25
   suspensionAnchor: 0.5
-  springRate: 30000
-  damperRate: 1500
+  springRate: 40000
+  damperRate: 2000
   suspensionTransform: {fileID: 0}
   caliperTransform: {fileID: 0}
   wheelTransform: {fileID: 6723988028513775380}
   groundPenetration: 0.02
   disableSuspensionMovement: 0
   hideWheelOnDisable: 1
-  localSteeringAxis: 1
+  localSteeringAxis: 2
   localSpinAxis: 0
 --- !u!1 &2020388219
 GameObject:
@@ -945,7 +975,7 @@ MonoBehaviour:
     parkRequiresStopAndBrakes: 0
     allowParkInManual: 0
     manualShiftTime: 0.25
-    autoShift: 1
+    autoShift: 0
     autoShiftNeutralRpm: 800
     autoShiftFirstGearRpm: 1000
     autoShiftDownRevs: 1900
@@ -1032,6 +1062,7 @@ Transform:
   - {fileID: 5558136680642465395}
   - {fileID: 1386385581}
   - {fileID: 1296356853}
+  - {fileID: 872025522}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1135,8 +1166,8 @@ MonoBehaviour:
   center: {x: 0.108, y: 0, z: 0}
   suspensionDistance: 0.25
   suspensionAnchor: 0.5
-  springRate: 30000
-  damperRate: 1500
+  springRate: 40000
+  damperRate: 2000
   suspensionTransform: {fileID: 0}
   caliperTransform: {fileID: 0}
   wheelTransform: {fileID: 902907433154116290}
@@ -1566,8 +1597,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8618316753780470543}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.7094995, y: 0.31713644, z: 1.2253901}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.70949936, y: 0.31716275, z: 1.2254734}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 5558136680642465395}
@@ -1952,13 +1983,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4803500175039560758}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.7095005, y: 0.31713638, z: 1.2253832}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 5558136680642465395}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6786525444408623602
 MeshFilter:
   m_ObjectHideFlags: 0
