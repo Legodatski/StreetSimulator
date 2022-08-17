@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets
 {
-    public class SSContext : DbContext
+    public class SSContext
     {
         
     }
