@@ -4981,6 +4981,10 @@ PrefabInstance:
       value: 5.55
       objectReference: {fileID: 0}
     - target: {fileID: 11415462, guid: 4a383ea4a8bde554a81e12745897d28a, type: 3}
+      propertyPath: gearbox.autoShift
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415462, guid: 4a383ea4a8bde554a81e12745897d28a, type: 3}
       propertyPath: tractionControl.customSlip
       value: 2.2
       objectReference: {fileID: 0}
